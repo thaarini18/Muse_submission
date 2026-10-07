@@ -1,0 +1,19 @@
+dev new pairs 1398120 pos rate trn 0.3478699887272872 val 0.007756445236637111
+VAL base F0.5 (lgb only, thr 0.85): 0.97313
+  add addr pairs p>=0.5: +2327 pairs (prec 0.795)  F0.5 0.97321
+  add addr pairs p>=0.6: +2036 pairs (prec 0.834)  F0.5 0.97346
+  add addr pairs p>=0.7: +1765 pairs (prec 0.877)  F0.5 0.97369
+  add addr pairs p>=0.8: +1495 pairs (prec 0.906)  F0.5 0.97384
+  add addr pairs p>=0.9: +1133 pairs (prec 0.930)  F0.5 0.97382
+  add addr pairs p>=0.95: +877 pairs (prec 0.940)  F0.5 0.97378
+n_part         4.638505e+06
+n_ratio        3.215921e+06
+num_extra_r    1.245053e+06
+a_tset         8.420479e+05
+num_j          3.189795e+05
+cos            2.814312e+05
+r_nm_len       2.477469e+05
+n_sk           2.271945e+05
+n_tset         2.068211e+05
+s1_best_p      1.291261e+05
+dtype: float64

@@ -1,0 +1,45 @@
+# Python 3.11 — fully pinned environment (direct + transitive dependencies)
+# Install:  python3.11 -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt
+
+# ---- core pipeline (CPU steps 1-3, 5-7)
+numpy==2.4.4
+pandas==3.0.2
+pyarrow==25.0.1
+scipy==1.17.1
+lightgbm==4.7.0              # MIT
+scikit-learn==1.8.0          # BSD-3
+rapidfuzz==3.14.6            # MIT
+anyascii==0.3.3              # ISC  (offline Unicode -> ASCII transliteration table)
+sparse-dot-topn==1.2.0       # Apache-2.0 (multithreaded sparse top-n matrix product)
+joblib==1.5.3
+threadpoolctl==3.6.0
+python-dateutil==2.9.0.post0
+six==1.17.0
+
+# ---- transformer stage (GPU step 4)
+torch==2.8.0                 # BSD-3; pulls its matching CUDA 12.x runtime wheels on Linux
+transformers==5.17.0         # Apache-2.0
+huggingface_hub==1.33.0
+tokenizers==0.23.2
+safetensors==0.8.0
+hf-xet==1.6.0
+filelock==4.0.4
+fsspec==2026.9.0
+packaging==26.1
+PyYAML==6.0.3
+regex==2026.9.10
+tqdm==4.70.1
+typing_extensions==4.15.0
+networkx==3.6.1
+Jinja2==3.1.6
+MarkupSafe==3.0.3
+requests==2.33.1
+urllib3==2.6.3
+idna==3.13
+certifi==2026.4.22
+charset-normalizer==3.4.7
+
+# ---- pretrained model checkpoints (Hugging Face hub; downloaded by ce_train.py, see README "External resources")
+#   distilbert-base-multilingual-cased   Apache-2.0, 134M parameters   (tags: ce, sib)
+#   xlm-roberta-base                     MIT, 278M parameters          (tag: xlmr)
+# Hardware: CPU steps 2-4 cores, 8+ GB RAM; GPU step one NVIDIA T4 (16 GB), CUDA 12.x driver
